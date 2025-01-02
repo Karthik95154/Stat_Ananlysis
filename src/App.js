@@ -7,6 +7,7 @@ import DistributionAnalysis from "./components/DistributionAnalysis"; // New com
 import "./styles/App.css";
 import InferentialStatistics from "./components/InferentialStatistics";
 
+
 function App() {
   const [data, setData] = useState([]);
   const [columnHeaders, setColumnHeaders] = useState([]);

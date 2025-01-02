@@ -25,10 +25,9 @@ ChartJS.register(
   LineElement
 );
 
-const InferentialStatisticsVisualization = () => {
+const InferentialStatisticsVisualiser = () => {
   const [selectedTopic, setSelectedTopic] = useState("Hypothesis Testing");
 
-  
   const hypothesisTestingData = {
     labels: ["Z-Test", "T-Test", "Chi-Square Test", "ANOVA"],
     datasets: [
@@ -41,7 +40,6 @@ const InferentialStatisticsVisualization = () => {
       },
     ],
   };
-
 
   const pValuesData = {
     labels: ["0.01", "0.05", "0.1", "Others"],
@@ -204,4 +202,4 @@ const styles = {
   },
 };
 
-export default InferentialStatisticsVisualization;
+export default InferentialStatisticsVisualiser;
