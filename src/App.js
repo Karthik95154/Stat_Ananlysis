@@ -6,6 +6,7 @@ import ChartGenerator from "./components/ChartGenerator";
 import DistributionAnalysis from "./components/DistributionAnalysis"; // New component for distribution
 import "./styles/App.css";
 import InferentialStatistics from "./components/InferentialStatistics";
+import TimeSeriesAnalysis from "./components/TimeSeriesAnalysis";
 
 
 function App() {
@@ -57,6 +58,12 @@ function App() {
               InferentialStatistics
             
             </button>
+            <button
+              className="navbar-button"
+              onClick={() => setSelectedComponent("TimeSeriesAnalysis")}
+            >
+              Time Series Analysis
+            </button>
 
           </div>
         </div>
@@ -87,8 +94,10 @@ function App() {
         {
           selectedComponent === "InferentialStatistics"  && (
             <InferentialStatistics data={data} columnHeaders={columnHeaders} />
-          )
-        }
+          )}
+         {selectedComponent === "TimeSeriesAnalysis" && (
+          <TimeSeriesAnalysis data={data} columnHeaders={columnHeaders} />
+        )}
 
       </div>
     </div>
